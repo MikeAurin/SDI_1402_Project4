@@ -20,7 +20,7 @@ if (myOtherNumber.length === myTelephone.length) {
 // Does an email contain a ".edu" in the string
 
 
-myEmail = "mikeaurin@fullsail.edu";
+myEmail = "mikeaurin@fullsail.com";
 emailCharacters = myEmail.match(["a-z"]+ "@" + ["a-z",".","a-z"]);
 if (emailCharacters != myEmail) {
     console.log("Question 2: " + myEmail + " is a valid email address.");
