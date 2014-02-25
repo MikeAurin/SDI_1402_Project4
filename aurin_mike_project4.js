@@ -42,7 +42,7 @@ if (myWebsite.indexOf(0-6) !== "http://") {
 		console.log("Question 3: " + true)
 			} else {
 		console.log("Question 3: " + false)
-		// Nested Conditional: Deliverable 3
+		// Extra Credit: Nested Conditional - Deliverable 3
 };
 
 // Question 4
@@ -75,8 +75,7 @@ console.log("Question 6: " + myDecimal.toFixed(2));
 
 // Question 8
 // Find the Number of days difference between two dates
-// Question 8
-// Find the Number of days difference between two dates
+
 var sisterBirthday = "2014-02-19";
 var myBirthday = "2014-08-22";
 
@@ -96,3 +95,41 @@ var timeDifferenceInHours = timeDifference / 60 / 60;
 var timeDifferenceInDays = timeDifferenceInHours  / 24;
 
 console.log("Question 8: There are " + timeDifferenceInDays + " days between my sister's birthday and my birthday.");
+
+// Question 9 
+// Take a string and convert it to produce a number value.
+
+var myNumber = "45";
+myNumber = parseInt(myNumber);
+console.log("Question 9: The string of '45' is now " + myNumber + ".");
+// Extra Credit: Missing a 'parseInt' requirement - Deliverable 1
+
+// Question 10
+// Find the smallest value of an array that is greater than a given number
+
+var severity = function (key, value, order) {
+    this.key = key;
+    this.value = value;
+    this.order = order;
+};
+
+function getHighest(array) {
+    var max = {};
+    for (var i = 0; i < array.length; i++) {
+        if (array[i].order > (max.order || 2))
+            max = array[i];
+    }
+    return max;
+}
+
+var array = [
+    new severity("", "Second", 2),
+    new severity("", "First", 1),
+    new severity("", "Fourth", 4),
+    new severity("", "Third", 3),
+    new severity("", "Fifth",5)
+];
+
+var highest = getHighest(array);
+
+alert(highest.value);
