@@ -53,3 +53,46 @@ String.prototype.capitalize = function() {
 }
 
 console.log("Question 4: " + "capitalize this!".capitalize());
+
+//Question 5
+// Replacing string separators with different characters
+
+
+var myString = "These commas seem unnecessary!";
+var myString = myString.split(" ");
+
+console.log("Question 5: " + myString);
+
+//Question 6
+// Format a number to a specific number of decimal places
+
+var myDecimal = 5.489487342;
+console.log("Question 6: " + myDecimal.toFixed(2));
+
+// Question 7
+// The question that needs to shave.  Fuzzy-match a number.  Is a number above or below another number with
+// a certain percent.
+
+// Question 8
+// Find the Number of days difference between two dates
+// Question 8
+// Find the Number of days difference between two dates
+var sisterBirthday = "2014-02-19";
+var myBirthday = "2014-08-22";
+
+sisterBirthday = sisterBirthday.split('-');
+myBirthday = myBirthday.split('-');
+
+sisterBirthday = new Date(sisterBirthday[0], sisterBirthday[1], sisterBirthday[2]);
+myBirthday = new Date(myBirthday[0], myBirthday[1], myBirthday[2]);
+
+sisterBirthday_unixtime = parseInt(sisterBirthday.getTime() / 1000);
+myBirthday_unixtime = parseInt(myBirthday.getTime() / 1000);
+
+var timeDifference = myBirthday_unixtime - sisterBirthday_unixtime;
+
+var timeDifferenceInHours = timeDifference / 60 / 60;
+
+var timeDifferenceInDays = timeDifferenceInHours  / 24;
+
+console.log("Question 8: There are " + timeDifferenceInDays + " days between my sister's birthday and my birthday.");
