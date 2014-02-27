@@ -6,15 +6,20 @@
 // Question 1
 // Does a number follow the same pattern as 123-456-7890
 
-var myTelephone = "407-400-4321";
-var myOtherNumber = "123-456-7890";
 
-if (myOtherNumber.length === myTelephone.length) {
-	console.log("Question 1: " + true); 
-	} else {
-		console.log("Question 1: " + false)
-
+var telephoneNumber = function(givenNumber) {
+	var validNumber = "555-555-5555",
+		givenNumber;
+	if (givenNumber.length == validNumber.length) {
+	console.log("Question 1: " + true);
+		} else {
+	console.log("Question 1: " + false);
+	}
+	return givenNumber;
 };
+
+givenNumber = telephoneNumber("561-400-4000");
+console.log (givenNumber + " is a valid telephone number");
 	
 //Question 2
 // Does an email contain a ".edu" in the string
@@ -32,7 +37,7 @@ if (emailCharacters != myEmail) {
 // Does a string begin with "http://" or "https://"
 
 var myWebsite = "http://www.droid-life.com";
-var myOtherWebsite = "https://www.phonearena.com";
+var myOtherWebsite = "https://www.facebook.com";
 
 if (myWebsite.indexOf(0-6) !== "http://") {
 	console.log("Question 3: " + true)
