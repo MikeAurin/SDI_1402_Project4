@@ -107,29 +107,14 @@ console.log("Question 9: The string of '45' is now " + myNumber + ".");
 // Question 10
 // Find the smallest value of an array that is greater than a given number
 
-var severity = function (key, value, order) {
-    this.key = key;
-    this.value = value;
-    this.order = order;
-};
 
-function getHighest(array) {
-    var max = {};
-    for (var i = 0; i < array.length; i++) {
-        if (array[i].order > (max.order || 2))
-            max = array[i];
-    }
-    return max;
+// Question 11
+// Find the total value of an array even if some values aren't numbers
+var myArray = ["mold", 12, "spores", 7, "fungus", 8, "twinkies"];
+
+var theSum = 0;
+for (var i=0; i<myArray.length; i++) {
+  if (!isNaN(parseInt(myArray[i]))) { theSum += myArray[i]; }
 }
+console.log("Question 11: " + theSum);
 
-var array = [
-    new severity("", "Second", 2),
-    new severity("", "First", 1),
-    new severity("", "Fourth", 4),
-    new severity("", "Third", 3),
-    new severity("", "Fifth",5)
-];
-
-var highest = getHighest(array);
-
-alert(highest.value);
