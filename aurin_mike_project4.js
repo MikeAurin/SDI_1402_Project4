@@ -18,20 +18,28 @@ var telephoneNumber = function(givenNumber) {
 	return givenNumber;
 };
 
-givenNumber = telephoneNumber("561-400-4000");
+givenNumber = telephoneNumber("561-400-4581");
 console.log (givenNumber + " is a valid telephone number");
 	
 //Question 2
 // Does an email contain a ".edu" in the string
 
 
-myEmail = "mikeaurin@fullsail.com";
-emailCharacters = myEmail.match(["a-z"]+ "@" + ["a-z",".","a-z"]);
-if (emailCharacters != myEmail) {
-    console.log("Question 2: " + myEmail + " is a valid email address.");
+var validEmail = function(myEmail) {
+	var myEmail = "mikeaurin@fullsail.edu",
+		emailCharacters = myEmail.match(["a-z"]+ "@" + ["a-z",".","a-z"]);
+	if (emailCharacters != myEmail) {
+    	console.log("Question 2: " + true);
 	} else {
-		console.log("Question 2: " + "Please enter a valid email address.");
+		console.log("Question 2: " + false);
+	}
+	
+	return myEmail;
 };
+
+myEmail = validEmail();
+console.log(myEmail + " is a valid email address"); 
+
 
 // Question 3
 // Does a string begin with "http://" or "https://"
